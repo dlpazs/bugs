@@ -1,0 +1,110 @@
+﻿@model IEnumerable<BugsApi.Models.Bug>
+
+@{
+    ViewData["Title"] = "Bugs";
+}
+
+<h2 class="text-center">Bugs</h2>
+
+<div class="card" style="margin:30px">
+    <a class="btn btn-outline-primary" asp-action="Create">Create New</a>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Title
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Opened
+            </th>
+            <th>
+                Assinged To
+            </th>
+            <th>
+                Actions
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <b>Open Bugs</b>
+        @foreach (var item in Model)
+        {
+            @if (item.IsOpen == true)
+            {
+                <tr>
+                    <td>
+                        @item.Title
+                    </td>
+                    <td>
+                        @item.Description
+                    </td>
+                    <td>
+                        @item.Opened
+                    </td>
+                    <td>
+                        @item.User.Name
+                    </td>
+                    <td>
+                        <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                        <a class="btn btn-outline-primary" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                        <a class="btn btn-outline-primary" asp-action="Close" asp-route-id="@item.Id">Close</a>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Title
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Opened
+            </th>
+            <th>
+                Assinged To
+            </th>
+            <th>
+                Actions
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <b>Closed Bugs</b>
+        @foreach (var item in Model)
+        {
+            @if (item.IsOpen == false)
+            {
+                <tr>
+                    <td>
+                        @item.Title
+                    </td>
+                    <td>
+                        @item.Description
+                    </td>
+                    <td>
+                        @item.Opened
+                    </td>
+                    <td>
+                        @item.User.Name
+                    </td>
+                    <td>
+                        <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                        <a class="btn btn-outline-primary" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                        <a class="btn btn-outline-primary" asp-action="Open" asp-route-id="@item.Id">Open</a>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
