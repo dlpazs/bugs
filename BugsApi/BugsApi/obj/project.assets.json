@@ -12948,11 +12948,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Parul\\Documents\\BugsApi\\BugsApi\\BugsApi.csproj",
+      "projectUniqueName": "C:\\Users\\Parul\\Documents\\iBugs\\bugs\\BugsApi\\BugsApi\\BugsApi.csproj",
       "projectName": "BugsApi",
-      "projectPath": "C:\\Users\\Parul\\Documents\\BugsApi\\BugsApi\\BugsApi.csproj",
+      "projectPath": "C:\\Users\\Parul\\Documents\\iBugs\\bugs\\BugsApi\\BugsApi\\BugsApi.csproj",
       "packagesPath": "C:\\Users\\Parul\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Parul\\Documents\\BugsApi\\BugsApi\\obj\\",
+      "outputPath": "C:\\Users\\Parul\\Documents\\iBugs\\bugs\\BugsApi\\BugsApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

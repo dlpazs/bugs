@@ -90,7 +90,8 @@ namespace BugsApi.Controllers
                         Description = bug.Description,
                         Title = bug.Title,
                         IsOpen = bug.IsOpen,
-                        Opened = bug.Opened
+                        Opened = bug.Opened,
+                        User = null
                     };
                     _context.Bugs.Add(bug);
                     await _context.SaveChangesAsync();
